@@ -66,7 +66,7 @@ def run_bot():
 
     else:
         talk('Please say it again?')
-
+talk('Hey, I am Bootlook')
 while True:
     talk('How can I help you?')
     
