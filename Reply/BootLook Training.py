@@ -25,8 +25,6 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            #engine.say(command)
-            #engine.runAndWait()
             if 'bhoot look' in command:
                 command = command.replace('bhoot look','')
                 print(command)
@@ -36,12 +34,11 @@ def take_command():
 
 def run_bot():
     command = take_command()
-    #print(command)
     if 'play' in command:
         song = command.replace('play','')
         talk('Playing' + song)
         pywhatkit.playonyt(song)
-        #print(song)
+
 
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')    #I is 12hrs format and H is 24hr format and p is for "am" or "pm"
